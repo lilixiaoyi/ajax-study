@@ -2,7 +2,7 @@
 
 4、在README.md中填入：
 
-![Image text](https://raw.githubusercontent.com/hongmaju/light7Local/master/img/productShow/20170518152848.png)
+![Image text](https://github.com/lilixiaoyi/ajax-study/blob/master/ajax.png)
 
 echo "# ajax-study" >> README.md
 git init
