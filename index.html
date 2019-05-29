@@ -1,0 +1,45 @@
+<html>
+<head>
+
+   
+    <script src="https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js">
+    </script>
+    <script>
+    
+    $(document).ready(function(){
+    
+        $.ajax({
+        async: true,
+        type: "GET",
+        dataType: 'jsonp',
+        jsonp: 'callback',
+        jsonpCallback: 'callbackfunction',
+        url: "http://open.iciba.com/dsapi/",
+        data: "",
+        timeout: 3000,
+        contentType: "application/json;utf-8",
+        success: function(data) {
+            console.log(data);
+            $('#today').append('<h3>'+data.content+data.note+'</h3>')
+            $('#imgid').attr("src", data.fenxiang_img);
+        }
+    });
+    
+    
+    });
+</script>
+
+</head>
+<body>
+
+    <div id = "today">
+
+    </div>
+    <img id='imgid' src=""  alt="上海鲜花港 - 郁金香" />
+
+</body>
+
+
+
+
+</html>

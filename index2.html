@@ -1,0 +1,36 @@
+<html>
+
+<head>
+
+
+    <script src="https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js">
+    </script>
+    <script>
+
+        $(document).ready(function () {
+
+            $.getJSON("https://api.ooopn.com/ciba/api.php",
+                function (data) {
+                    $("#comment").text(data.ciba);
+                });
+            $(function () {
+                $("#comment").click(function () {
+                    $(this).select();
+                })
+            })
+
+
+        });
+    </script>
+
+</head>
+<body>
+
+<div id = 'comment'></div>
+
+</body>
+
+
+
+
+</html>
